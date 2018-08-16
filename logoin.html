@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>淘宝网 - 淘 ！我喜欢</title>
+	</head>
+	<link rel="stylesheet" href="css/logoin.css" />
+	<link rel="stylesheet" href="css/iconfont.css" />
+	<link rel="icon" href="favicon.ico" />
+	<script type="text/javascript" src="js/move.js"></script>
+	<script>
+		window.onload = function() {
+			var logoin_cut = document.getElementsByClassName("logo_cut");
+			var ma_shuaxing = document.getElementsByClassName("ma_shuaxing")[0];
+			var shuaxing = ma_shuaxing.getElementsByTagName("p")[0];
+			var g_login_box1 = document.getElementsByClassName("g_logoin_box")[0];
+			var g_login_box2 = document.getElementsByClassName("g_logoin_box2")[0];
+			var erweima = document.getElementsByClassName("logoin_ma")[0];
+			var shuaxing_timer = setTimeout(shixian, 20000);
+			var sm22=document.getElementById("sm222");
+			function shixian() {
+				ma_shuaxing.style.display = "block";
+			}
+			buffer(erweima, "opacity", 1, 100);
+			logoin_cut[1].onclick = function() {
+				g_login_box2.style.display = "none";
+				g_login_box1.style.display = "block";
+				erweima.style.opacity = 0.1;
+				clearTimeout(shuaxing_timer);
+			}
+			logoin_cut[0].onclick = function() {
+				g_login_box1.style.display = "none";
+				g_login_box2.style.display = "block";
+				buffer(erweima, "opacity", 1, 100);
+				shuaxing_timer = setTimeout(shixian, 20000)
+				ma_shuaxing.style.display = "none";
+			}
+			shuaxing.onclick = function() {
+				ma_shuaxing.style.display = "none";
+			}
+			erweima.onmouseover=function(){
+				buffer(erweima,"left",10,100,function(){
+					sm22.style.display="block"
+				})
+				buffer(sm22,"opacity",1,100,function(){
+					sm22.style.display="block"
+				})
+			}
+			erweima.onmouseout=function(){
+				buffer(sm22,"opacity",0.1,100,function(){
+					sm22.style.display="none"
+				})
+				buffer(erweima,"left",80,100);
+			}
+		}
+	</script>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<h1><a href="#"><img src="img/logo.jpg"/></a></h1>
+				<div class="logo-msg">为确保您账户的安全及正常使用，依《网络安全法》相关要求，6月1日起会员账户需绑定手机。如您还未绑定，请尽快完成，感谢您的理解及支持！ </div>
+				<a href="#"><i class="iconfont icon-msg"></i>"登录页面"改进建议</a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="content_layout">
+				<a href="#"><img src="img/login.jpg" /></a>
+				<div class="logoin_box">
+					<div class="g_logoin_box">
+						<h2>密码登录</h2>
+						<div class="form">
+							<i class="iconfont icon-taobaotese"></i>
+							<input type="text" placeholder="会员名/邮箱/手机号" />
+						</div>
+						<div class="form">
+							<i class="iconfont icon-anquan"></i>
+							<input type="password" />
+						</div>
+						<input type="button" value="登录" /><br />
+						<a href="#"><img src="img/weibologo.jpg" />微博登录</a>
+						<a href="#"><img src="img/iplaylogo.jpg" />支付宝登录</a><br />
+						<div class="logoin_footer">
+							<a href="#">免费注册</a>
+							<a href="#">忘记登录名</a>
+							<a href="#">忘记密码</a>
+						</div>
+						<div class="logo_cut"><img src="img/logoinma.jpg" /></div>
+						<div class="logoin_tips"><i class="iconfont icon-anquan"></i>扫码登录更安全</div>
+					</div>
+					<div class="g_logoin_box2">
+						<h2>手机扫码，安全登录</h2>
+						<div class="logo_cut"><img src="img/logoindiannao.jpg" /></div>
+						<div class="logoin_tips"><i class="iconfont icon-anquan"></i>密码登录在这里</div>
+						<div class="logoin_ma">
+							<div class="ma_shuaxing">
+								<span>二维码已失效</span>
+								<p>点击刷新</p>
+							</div>
+							<img id ="sm222" src="img/saoyisao.png"/>
+						</div>
+						<div class="saoyisao">
+							<img src="img/logoma.jpg" /> &nbsp;打开&nbsp;
+							<a href="#">手机淘宝</a>&nbsp;|&nbsp;
+							<a href="#">手机天猫</a><br />&nbsp;扫一扫登录
+						</div>
+						<div class="logoin_footer">
+							<a href="#">免费注册</a>
+							<a href="#">密码登录</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer_logoin">
+				<img src="img/wj.gif" />
+				<div class="footer_hd">
+					<a href="#">阿里巴巴集团</a>|
+					<a href="#">阿里巴巴国际站</a>|
+					<a href="#">阿里巴巴中国站</a>|
+					<a href="#">全球速卖通</a>|
+					<a href="#">天猫</a>|
+					<a href="#">聚划算</a>|
+					<a href="#">一淘</a>|
+					<a href="#">阿里妈妈</a>|
+					<a href="#">飞猪</a>|
+					<a href="#">虾米</a>|
+					<a href="#">阿里云计算</a>|
+					<a href="#">支付宝</a>|
+					<a href="#">万网</a>|
+					<a href="#">来往</a>
+				</div>
+				<div class="footer_bd">
+					<a href="#">关于淘宝</a>
+					<a href="#">合作伙伴</a>
+					<a href="#">营销中心</a>
+					<a href="#">廉正举报</a>
+					<a href="#">联系客服</a>
+					<a href="#">开放平台</a>
+					<a href="#">诚征英才</a>
+					<a href="#">联系我们</a>
+					<a href="#">网站地图</a>
+					<a href="#">法律声明及隐私权政策</a>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;© 2017 Taobao.com 版权所有</span><br />
+					<span>网络文化经营许可证：文网文[2010]040号|增值电信业务经营许可证：浙B2-20080224-1|信息网络传播视听节目许可证：1109364号</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
